@@ -14,7 +14,7 @@ export class DataModule {
 }
 
 @Module({
-  imports: [DataService],
+  imports: [DataModule],
   providers: [AuthService],
 })
 export class AuthModule {
