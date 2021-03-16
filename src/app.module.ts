@@ -4,6 +4,7 @@ import { AuthService, DataService } from './services';
 @Module({
   imports: [],
   providers: [DataService],
+  exports:[DataService]
 })
 export class DataModule {
   static register(data_config: any): DynamicModule {
@@ -16,6 +17,7 @@ export class DataModule {
 @Module({
   imports: [DataModule],
   providers: [AuthService],
+  exports:[AuthService]
 })
 export class AuthModule {
   static register(auth_config: any): DynamicModule {
